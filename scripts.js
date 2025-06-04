@@ -14,7 +14,7 @@ function sorteio(cor, tamanho) {
     const randomNumber = min + Math.floor(Math.random() * (max - min + 1))
 
 
-    if (isNaN(min) || isNaN(max) || min > max) {
+    if (isNaN(min) || isNaN(max) || min >= max) {
         divImg.style.display = "flex"
 
         circle.style.display = "none"
@@ -26,7 +26,7 @@ function sorteio(cor, tamanho) {
 
         error.style.display = "block"
 
-        error.innerHTML = "Por favor, insira números válidos e garanta que o mínimo seja menor ou igual ao máximo."
+        error.innerHTML = "Por favor, insira números válidos e garanta que o mínimo seja menor que o máximo."
     }
 
     else {
